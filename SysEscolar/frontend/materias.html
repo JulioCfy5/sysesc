@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Materias</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <h1>Gestión de Materias</h1>
+  <form id="formMateria">
+    <input type="text" id="clave" placeholder="Clave" required>
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <button type="submit">Agregar</button>
+  </form>
+  <h2>Listado</h2>
+  <table>
+    <thead><tr><th>Clave</th><th>Nombre</th></tr></thead>
+    <tbody id="tablaMaterias"></tbody>
+  </table>
+  <script src="js/materias.js"></script>
+</body>
+</html>

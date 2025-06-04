@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscripciones</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <h1>Inscripciones</h1>
+
+  <form id="formInscripcion">
+    <label>Alumno:</label>
+    <select id="alumnoSelect" required></select>
+
+    <label>Carrera:</label>
+    <select id="carreraSelect" required></select>
+
+    <label>Semestre:</label>
+    <input type="number" id="semestre" required min="1">
+
+    <label>Turno:</label>
+    <select id="turno" required>
+      <option value="M">Matutino</option>
+      <option value="V">Vespertino</option>
+      <option value="N">Nocturno</option>
+    </select>
+
+    <label>Tipo:</label>
+    <select id="tipo" required>
+      <option value="I">Inscripción</option>
+      <option value="R">Reinscripción</option>
+    </select>
+
+    <hr>
+
+    <h2>Agregar Materia</h2>
+
+    <label>Materia:</label>
+    <select id="materiaSelect"></select>
+
+    <label>Profesor:</label>
+    <select id="profesorSelect"></select>
+
+    <label>Hora:</label>
+    <input type="text" id="hora" placeholder="Ej. 08:00 - 09:30">
+
+    <label>Aula:</label>
+    <input type="text" id="aula">
+
+    <button type="button" id="btnAgregarMateria">Agregar Materia</button>
+
+    <h3>Materias Agregadas</h3>
+    <table>
+      <thead>
+        <tr><th>Materia</th><th>Profesor</th><th>Hora</th><th>Aula</th></tr>
+      </thead>
+      <tbody id="tablaMateriasAgregadas"></tbody>
+    </table>
+
+    <button type="submit">Guardar Inscripción</button>
+  </form>
+
+  <script src="js/inscripciones.js"></script>
+</body>
+</html>

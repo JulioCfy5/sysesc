@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Profesores</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <h1>Gestión de Profesores</h1>
+  <form id="formProfesor">
+    <input type="text" id="matricula" placeholder="Matrícula" required>
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <input type="text" id="apPat" placeholder="Apellido Paterno" required>
+    <input type="text" id="apMat" placeholder="Apellido Materno" required>
+    <input type="email" id="correo" placeholder="Correo" required>
+    <input type="text" id="telefono" placeholder="Teléfono" required>
+    <button type="submit">Agregar</button>
+  </form>
+  <h2>Listado</h2>
+  <table>
+    <thead><tr><th>Matrícula</th><th>Nombre</th><th>Ap. Paterno</th><th>Ap. Materno</th><th>Correo</th><th>Teléfono</th></tr></thead>
+    <tbody id="tablaProfesores"></tbody>
+  </table>
+  <script src="js/profesores.js"></script>
+</body>
+</html>

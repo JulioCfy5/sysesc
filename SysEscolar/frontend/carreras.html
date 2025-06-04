@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carreras</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <h1>Gestión de Carreras</h1>
+  <form id="formCarrera">
+    <input type="text" id="clave" placeholder="Clave" required>
+    <input type="text" id="nombre" placeholder="Nombre" required>
+    <button type="submit">Agregar</button>
+  </form>
+  <h2>Listado</h2>
+  <table>
+    <thead><tr><th>Clave</th><th>Nombre</th></tr></thead>
+    <tbody id="tablaCarreras"></tbody>
+  </table>
+  <script src="js/carreras.js"></script>
+</body>
+</html>
