@@ -2,3 +2,5 @@ backend:
 npm install --save-dev nodemon
 npm install express mysql2 cors dotenv
 npm init -y
+
+npm run dev
