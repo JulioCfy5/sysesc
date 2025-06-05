@@ -1,32 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('loginForm');
+document.getElementById('loginForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+  const usuario = document.getElementById('usuario').value;
+  const contrasena = document.getElementById('contrasena').value;
 
-    const usuario = document.getElementById('usuario').value;
-    const password = document.getElementById('password').value;
+  console.log("Enviando datos:", usuario, contrasena);
 
-    try {
-      const res = await fetch('http://localhost:3000/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ usuario, password })
-      });
+  try {
+    const response = await fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ usuario, contrasena })
+    });
 
-      const data = await res.json();
+    const data = await response.json();
+    console.log("Respuesta del servidor:", data);
 
-      if (res.ok && data.acceso === true) {
-        console.log('Login exitoso, redirigiendo...');
-        window.location.href = 'menu.html';
-      } else {
-        alert('Usuario o contraseña incorrectos');
-      }
-    } catch (error) {
-      console.error('Error de conexión:', error);
-      alert('Error al conectar con el servidor.');
+    if (response.ok && data.acceso === true) {
+      alert("Login exitoso");
+      window.location.href = "menu.html";
+    } else {
+      alert("Usuario o contraseña incorrectos");
     }
-  });
+
+  } catch (error) {
+    console.error("Error al conectar con el backend:", error);
+    alert("No se pudo conectar con el servidor");
+  }
 });

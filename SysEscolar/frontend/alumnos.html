@@ -2,37 +2,48 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Alumnos</title>
+  <title>Gestión de Alumnos</title>
   <link rel="stylesheet" href="css/estilos.css">
+ <!-- Ajusta según ruta -->
 </head>
 <body>
-  <h1>Gestión de Alumnos</h1>
 
-  <form id="alumnoForm">
-    <input type="text" placeholder="Matrícula" id="matricula" required>
-    <input type="text" placeholder="Nombre" id="nombre" required>
-    <input type="text" placeholder="Apellido Paterno" id="apPat" required>
-    <input type="text" placeholder="Apellido Materno" id="apMat" required>
-    <input type="email" placeholder="Correo" id="correo" required>
-    <input type="text" placeholder="Teléfono" id="telefono" required>
-    <button type="submit">Guardar Alumno</button>
-  </form>
+  <nav>SysEscolar - Gestión de Alumnos</nav>
 
-  <h2>Lista de Alumnos</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Matrícula</th>
-        <th>Nombre</th>
-        <th>Apellido Paterno</th>
-        <th>Apellido Materno</th>
-        <th>Correo</th>
-        <th>Teléfono</th>
-      </tr>
-    </thead>
-    <tbody id="tablaAlumnos"></tbody>
-  </table>
+  <div class="container">
+    <h1>Gestión de Alumnos</h1>
 
-  <script src="js/alumnos.js"></script>
+    <!-- Formulario para agregar alumnos -->
+    <form id="form-alumnos">
+      <input type="text" name="matricula" placeholder="Matrícula" required>
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="text" name="apellido_paterno" placeholder="Apellido Paterno">
+      <input type="text" name="apellido_materno" placeholder="Apellido Materno">
+      <input type="email" name="correo" placeholder="Correo electrónico">
+      <input type="tel" name="telefono" placeholder="Teléfono">
+      <button type="submit">Guardar Alumno</button>
+    </form>
+
+    <!-- Tabla de alumnos -->
+    <h2>Lista de Alumnos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Matrícula</th>
+          <th>Nombre</th>
+          <th>Apellido Paterno</th>
+          <th>Apellido Materno</th>
+          <th>Correo</th>
+          <th>Teléfono</th>
+        </tr>
+      </thead>
+      <tbody id="tabla-alumnos">
+        <!-- Aquí se inyectan filas desde alumnos.js -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer>© 2025 - Equipo SysEscolar</footer>
+  <script src="js/alumnos.js"></script> <!-- JS funcional -->
 </body>
 </html>

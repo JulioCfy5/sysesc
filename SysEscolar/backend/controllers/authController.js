@@ -1,8 +1,10 @@
 exports.login = (req, res) => {
-  const { usuario, password } = req.body;
-  if (usuario === 'admin' && password === 'admin') {
-    res.json({ success: true });
+  const { usuario, contrasena } = req.body;
+
+  // Validación directa de usuario/contraseña fijos
+  if (usuario === "admin" && contrasena === "admin") {
+    return res.status(200).json({ acceso: true });
   } else {
-    res.json({ success: false });
+    return res.status(401).json({ acceso: false, mensaje: "Usuario o contraseña incorrectos" });
   }
 };

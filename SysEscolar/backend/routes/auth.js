@@ -1,15 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const authController = require('../controllers/authController');
 
-// Ruta POST para login
-router.post('/', (req, res) => {
-  const { usuario, password } = req.body;
-
-  if (usuario === 'admin' && password === 'admin') {
-    res.json({ acceso: true });
-  } else {
-    res.status(401).json({ acceso: false });
-  }
-});
+// POST /login → usa lógica del controlador
+router.post('/', authController.login);
 
 module.exports = router;

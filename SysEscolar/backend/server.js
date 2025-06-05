@@ -17,5 +17,6 @@ app.use('/profesores', require('./routes/profesores'));
 app.use('/inscripciones', require('./routes/inscripciones'));
 
 app.use('/login', authRoutes); // <-- Importante
+app.use("/login", require("./routes/auth"));
 
 app.listen(3000, () => console.log('Servidor en http://localhost:3000'));

@@ -4,62 +4,86 @@
   <meta charset="UTF-8">
   <title>Inscripciones</title>
   <link rel="stylesheet" href="css/estilos.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>Inscripciones</h1>
 
-  <form id="formInscripcion">
-    <label>Alumno:</label>
-    <select id="alumnoSelect" required></select>
+  <nav>SysEscolar - Inscripciones</nav>
 
-    <label>Carrera:</label>
-    <select id="carreraSelect" required></select>
+  <div class="container">
+    <h1>Inscripciones</h1>
 
-    <label>Semestre:</label>
-    <input type="number" id="semestre" required min="1">
+    <form id="form-inscripciones">
+      <!-- DATOS GENERALES -->
+      <div class="fila">
+        <select name="alumno" required>
+          <option value="">Alumno</option>
+        </select>
 
-    <label>Turno:</label>
-    <select id="turno" required>
-      <option value="M">Matutino</option>
-      <option value="V">Vespertino</option>
-      <option value="N">Nocturno</option>
-    </select>
+        <select name="carrera" required>
+          <option value="">Carrera</option>
+        </select>
+      </div>
 
-    <label>Tipo:</label>
-    <select id="tipo" required>
-      <option value="I">Inscripción</option>
-      <option value="R">Reinscripción</option>
-    </select>
+      <div class="fila">
+        <input type="text" name="semestre" placeholder="Semestre">
+        <input type="text" name="turno" placeholder="Turno">
+      </div>
 
-    <hr>
+      <div class="fila">
+        <select name="tipo" required>
+          <option>Inscripción</option>
+          <option>Reinscripción</option>
+        </select>
+      </div>
 
-    <h2>Agregar Materia</h2>
+      <!-- SECCIÓN AGREGAR MATERIA -->
+      <fieldset class="bloque-materia">
+        <legend>Agregar Materia</legend>
 
-    <label>Materia:</label>
-    <select id="materiaSelect"></select>
+        <div class="fila">
+          <select name="materia" required>
+            <option value="">Materia</option>
+          </select>
 
-    <label>Profesor:</label>
-    <select id="profesorSelect"></select>
+          <select name="profesor" required>
+            <option value="">Profesor</option>
+          </select>
+        </div>
 
-    <label>Hora:</label>
-    <input type="text" id="hora" placeholder="Ej. 08:00 - 09:30">
+        <div class="fila">
+          <input type="text" name="hora" placeholder="Ej. 08:00 - 09:30" required>
+          <input type="text" name="aula" placeholder="Aula" required>
+        </div>
 
-    <label>Aula:</label>
-    <input type="text" id="aula">
+        <div class="fila derecha">
+          <button type="button" id="btn-agregar-materia">Agregar Materia</button>
+        </div>
+      </fieldset>
 
-    <button type="button" id="btnAgregarMateria">Agregar Materia</button>
+      <!-- LISTA DE MATERIAS -->
+      <h3 style="margin-top: 30px;">Materias Agregadas</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>Profesor</th>
+            <th>Hora</th>
+            <th>Aula</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-materias">
+          <!-- Se llenará dinámicamente -->
+        </tbody>
+      </table>
 
-    <h3>Materias Agregadas</h3>
-    <table>
-      <thead>
-        <tr><th>Materia</th><th>Profesor</th><th>Hora</th><th>Aula</th></tr>
-      </thead>
-      <tbody id="tablaMateriasAgregadas"></tbody>
-    </table>
+      <div class="fila">
+        <button type="submit">Guardar Inscripción</button>
+      </div>
+    </form>
+  </div>
 
-    <button type="submit">Guardar Inscripción</button>
-  </form>
-
+  <footer>© 2025 - Equipo SysEscolar</footer>
   <script src="js/inscripciones.js"></script>
 </body>
 </html>

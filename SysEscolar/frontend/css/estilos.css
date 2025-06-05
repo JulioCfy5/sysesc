@@ -1,0 +1,293 @@
+/* Reset básico y configuración global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 20px;
+}
+
+/* Contenedor principal para centrar contenido */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Títulos */
+h1, h2 {
+  color: #1a237e;
+  margin-bottom: 20px;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+form input,
+form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: calc(33.33% - 10px);
+  font-size: 14px;
+}
+
+/* Botón */
+form button {
+  padding: 10px 20px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background-color: #3949ab;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+table th {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+
+/* Footer y nav opcionales */
+nav {
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #999;
+  font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+  color: #1a237e;
+  font-weight: bold;
+}
+
+.login-form {
+  max-width: 500px;
+  margin: 100px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.login-form h1 {
+  color: #1a237e;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #3949ab;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: calc(33.33% - 10px);
+  font-size: 14px;
+}
+
+form button {
+  background-color: #1a237e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #3949ab;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+body {
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: calc(33.33% - 10px);
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #1a237e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #3949ab;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.fila input,
+.fila select {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.fila.derecha {
+  justify-content: flex-end;
+}
+
+fieldset.bloque-materia {
+  margin-top: 30px;
+  border: 2px solid #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+}
+
+fieldset.bloque-materia legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #1a237e;
+  font-size: 18px;
+}

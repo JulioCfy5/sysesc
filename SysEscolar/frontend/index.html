@@ -2,21 +2,26 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Login</title>
+  <title>Iniciar Sesión</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-  <h1>Iniciar Sesión</h1>
-  <form id="loginForm">
-    <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario" required><br>
 
-    <label for="password">Contraseña:</label>
-    <input type="password" id="password" required><br>
+  <div class="login-form">
+    <h1>Iniciar Sesión</h1>
+    <form id="loginForm">
+      <label for="usuario">Usuario:</label>
+      <input type="text" id="usuario" name="usuario" required><br>
 
-    <button type="submit">Entrar</button>
-  </form>
+      <label for="contrasena">Contraseña:</label>
+      <input type="password" id="contrasena" name="contrasena" required><br>
 
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <!-- Enlace al archivo JS que procesa el login -->
   <script src="js/login.js"></script>
+
 </body>
 </html>
