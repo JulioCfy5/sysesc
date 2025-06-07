@@ -16,24 +16,24 @@
     <form id="form-inscripciones">
       <!-- DATOS GENERALES -->
       <div class="fila">
-        <select name="alumno" required>
+        <select id="alumno" name="alumno" required>
           <option value="">Alumno</option>
         </select>
 
-        <select name="carrera" required>
+        <select id="carrera" name="carrera" required>
           <option value="">Carrera</option>
         </select>
       </div>
 
       <div class="fila">
-        <input type="text" name="semestre" placeholder="Semestre">
-        <input type="text" name="turno" placeholder="Turno">
+        <input type="text" id="semestre" name="semestre" placeholder="Semestre" required>
+        <input type="text" id="turno" name="turno" placeholder="Turno" required>
       </div>
 
       <div class="fila">
-        <select name="tipo" required>
-          <option>Inscripción</option>
-          <option>Reinscripción</option>
+        <select id="tipo" name="tipo" required>
+          <option value="Inscripción">Inscripción</option>
+          <option value="Reinscripción">Reinscripción</option>
         </select>
       </div>
 
@@ -42,18 +42,18 @@
         <legend>Agregar Materia</legend>
 
         <div class="fila">
-          <select name="materia" required>
+          <select id="materia" name="materia" required>
             <option value="">Materia</option>
           </select>
 
-          <select name="profesor" required>
+          <select id="profesor" name="profesor" required>
             <option value="">Profesor</option>
           </select>
         </div>
 
         <div class="fila">
-          <input type="text" name="hora" placeholder="Ej. 08:00 - 09:30" required>
-          <input type="text" name="aula" placeholder="Aula" required>
+          <input type="text" id="hora" name="hora" placeholder="Ej. 08:00 - 09:30" required>
+          <input type="text" id="aula" name="aula" placeholder="Aula" required>
         </div>
 
         <div class="fila derecha">
